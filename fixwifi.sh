@@ -23,6 +23,7 @@ echo "------------------------------------------------------"
 echo "Setting up routes"
 echo "------------------------------------------------------"
 sudo ip a d 10.0.0.10/8 dev wlo1
+sudo ip a d default dev wlo1
 sudo ip a a 10.0.0.10/8 dev wlo1 brd 10.255.255.255
 sudo ip r a 10.0.0.0/8 dev wlo1 proto kernel scope link src 10.0.0.10
 sudo ip r a default via 10.0.0.1
